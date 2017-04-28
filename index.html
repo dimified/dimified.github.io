@@ -7,16 +7,27 @@
 <body>
 
 <a href="#" id="link">Play Movie</a>
+<a href="#" id="play">Play Jqurey</a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.2/superagent.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
     document.getElementById('link').addEventListener('click', function () {
         var request = window.superagent;
         request
-            .get('http://api.movie-facts.com')
+            .get('https://reqres.in/api/products/3')
             .end(function () {
+
                 window.location = 'https://maxdome-onboard.video/play';
+
             });
+    });
+
+    document.getElementById('play').addEventListener('click', function () {
+        window.$.get('https://reqres.in/api/products/3', function () {
+            console.log('hello');
+            window.location = 'https://maxdome-onboard.video/play';
+        });
     });
 </script>
 </body>
