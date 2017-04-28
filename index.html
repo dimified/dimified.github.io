@@ -8,9 +8,15 @@
 
 <a href="#" id="link">Play Movie</a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.2/superagent.min.js"></script>
 <script>
     document.getElementById('link').addEventListener('click', function () {
-        window.location = 'https://maxdome-onboard.video/play';
+        var request = window.superagent;
+        request
+            .get('http://api.movie-facts.com')
+            .end(function () {
+                window.location = 'https://maxdome-onboard.video/play';
+            });
     });
 </script>
 </body>
