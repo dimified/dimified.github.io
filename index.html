@@ -6,13 +6,14 @@
 </head>
 <body>
 
-<a href="#" id="link">Play Movie</a>
-<a href="#" id="play">Play Jqurey</a>
+<a href="#" id="superagent"><h3>Request with Superagent</h3></a>
+<a href="#" id="jquery"><h3>Request with jQuery</h3></a>
+<a href="#" id="location"><h3>Change location without Request</h3></a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.2/superagent.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-    document.getElementById('link').addEventListener('click', function () {
+    document.getElementById('superagent').addEventListener('click', function () {
         var request = window.superagent;
         request
             .get('https://reqres.in/api/products/3')
@@ -23,10 +24,14 @@
             });
     });
 
-    document.getElementById('play').addEventListener('click', function () {
+    document.getElementById('jquery').addEventListener('click', function () {
         window.$.get('https://reqres.in/api/products/3', function () {
             window.location = 'https://url.video';
         });
+    });
+
+    document.getElementById('location').addEventListener('click', function () {
+        window.location = 'https://url.video';
     });
 </script>
 </body>
