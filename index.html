@@ -18,15 +18,14 @@
             .get('https://reqres.in/api/products/3')
             .end(function () {
 
-                window.location = 'https://maxdome-onboard.video/play?customerId=1234567890&orderId=1234567890&hostDomain=host&hostTracking=host&returnURL=host';
+                window.location = 'https://url.video';
 
             });
     });
 
     document.getElementById('play').addEventListener('click', function () {
         window.$.get('https://reqres.in/api/products/3', function () {
-            console.log('hello');
-            window.location = 'https://maxdome-onboard.video/play?customerId=1234567890&orderId=1234567890&hostDomain=host&hostTracking=host&returnURL=host';
+            window.location = 'https://url.video';
         });
     });
 </script>
